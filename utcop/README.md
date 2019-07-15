@@ -5,8 +5,11 @@ UTCOP基于 kubernetes 平台的容器化编排与部署方案
 - 代码打包成 docker 镜像存于内部容器仓库；
 - 应用配置托管于独立的 git + config 服务中；
 - 自动化构建基于 gitlba 和 jenkins ；
-- springboot项目结构示例：
+
+- [项目基础](./ci/project.md) 
 ```
+springboot项目结构示例：
+
 ├── src/main/java
 │   └── com.utcop     # 项目源码
 ├── src/main/resources
@@ -24,11 +27,9 @@ UTCOP基于 kubernetes 平台的容器化编排与部署方案
 │   └── values          # 项目信息，目前采用 shell 变量，包含项目名称、版本、服务名称等
 └── └── build.sh		    # 构建脚本，调用 dockerfiles 与 k8s 中的脚本
 ```
-- 构建流程图
-![CI流程图](./images/ci_cd.png)
 
-- [项目基础](./ci/project.md)
 - [构建流程](./ci/buildflow.md)
+![CI流程图](./images/ci.png)
 
 
 # 编排部署
@@ -36,13 +37,20 @@ UTCOP基于 kubernetes 平台的容器化编排与部署方案
 ![基础结构](./images/compose.png)
 
 ## 环境搭建
+### 开发
+minkube
+
+### 测试生产
 自由算力（自有DC、私有云、公有云）作为承载；linux 操作系统之上使用 `kubeasz` 一键完成 Kubernetes 运行环境的搭建；
 
 ## 服务结构
 整个体系中的服务主要包含两大类：平台基础支撑服务、UTCOP产品服务；
 
+
 ## 访问控制策略
 严格控制集群内外/内外网 的服务可见性与身份认证授权；
+
+## 网络规划
 
  
 # 服务治理
