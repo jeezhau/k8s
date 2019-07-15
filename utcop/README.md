@@ -32,7 +32,7 @@ springboot项目结构示例：
 ![CI流程图](./images/ci.png)
 
 
-# 服务结构
+# 整体结构
 整个体系中的服务主要包含两大类：平台基础支撑服务、UTCOP产品服务；
 ![基础结构](./images/compose.png)
 
@@ -41,65 +41,48 @@ springboot项目结构示例：
 `kubernetes + 自由算力` 为基础设施；并配套使用一些开源项目进行；
 
 ## 环境搭建
-### [开发](./env_dev.md) 
+### [开发](./compose/env/dev.md) 
 基于minikube搭建
 
-
-### [测试生产](./env_test_prod.md)
+### [测试生产](./compose//env/test-prod.md)
 自由算力（自有DC、私有云、公有云）作为承载；linux 操作系统之上使用 `kubeasz` 一键完成 Kubernetes 运行环境的搭建；
 
-
-## 访问控制策略
+## [访问控制策略](./compose//access-control.md)
 严格控制集群内外/内外网 的服务可见性与身份认证授权；
 
+## [网络规划](./compose//network.md) IP 与 NodePort 的分配规划
 
-
-## 网络规划
-IP
-NodePort
-
-
-## 负载均衡
-ecloud loadbalancer/ex-lb 、ingress
+## [负载均衡](./compose//lb.md) Ingress + LB
  
 # 服务治理
-## 数据高可用
+## [数据高可用](./servicemng/ha-data.md)
 高可用主从+定时备份 mysql 数据库；高可用redis集群；
 
-## 服务自动伸缩
+## [服务自动伸缩](./servicemng/auto-scale.md)
 根据流量与机器负载自动进行服务数量的伸缩；
 
-## 版本升级
-滚动升级 rollingUpdate
-recreate
-金丝雀
-蓝绿部署
+## [版本升级](./servicemng/upgrade.md)
 
-## 日志监控
+## [日志监控](./servicemng/loginfo.md)
 
+## [性能监控](./servicemng/metrics.md)
 
-## 性能监控
-
-
-
-
-
-## 集群联邦
+## [集群联邦](./servicemng/federa.md)
 
 # 核心服务
-## 认证授权中心
+## [认证授权中心](./coresvc/oauth2.md)
 基于 oauth2 的开放身份认证与授权服务；
 
-## 资源中心
+## [资源中心](./coresvc/rc.md)
 提供基于租户的资源管理服务，包含 用户、组织、开发者、应用等；
 
-## 网关
+## [网关](./coresvc/gtway.md)
 集中、自定义访问安全控制、流量管控、服务代理；
 
-## 服务注册中心
+## [服务注册中心](./coresvc/service-register.md)
 外部服务的注册中心，作为内部其他服务访问外部服务的服务发现中心；
 
-## 集中配置
+## [集中配置](./coresvc/config-server.md)
 代码与配置分离，管理全部服务的配置文件数据；
 
 
