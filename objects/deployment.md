@@ -1,0 +1,8 @@
+Deployment 为Pod和ReplicaSet提供了一个声明式定义方法，用来替代以前的RC来方便的管理应用。
+- 定义Deployment来创建Pod和ReplicaSet
+- 滚动升级和回滚应用
+- 扩容和缩容
+- 暂停和继续Deployment
+
+只要Deployment的rollout被触发就会创建一个revision，当且仅当deployment的pod template被更改，例如更新template中的label和容器镜像时，就会创建出一个新的revision；其他的更新不会创建revison
+
