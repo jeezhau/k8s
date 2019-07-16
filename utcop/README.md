@@ -53,9 +53,11 @@ Ingress + LB
 ## [版本升级](./servicemng/upgrade.md)
 服务新版本管理：重建、滚动升级
 
-## [日志监控](./servicemng/loginfo.md)
+## [日志](./servicemng/loginfo.md)
+容器日志收集、处理和搜索
 
 ## [性能监控](./servicemng/metrics.md)
+监控容器和集群的状态，并展示、告警
 
 ## [集群联邦](./servicemng/federa.md)
 多地域集群负载均衡、高可用
