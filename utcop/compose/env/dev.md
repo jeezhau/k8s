@@ -76,7 +76,7 @@ minikube start --registry-mirror=https://registry.docker-cn.com --kubernetes-ver
 - kubectl 可以在宿主机及minikube中使用；
 
 ### 注意事项
-minikube虚拟机与宿主机使用不通的网络，可以使用 `minikube status ` 或 `kubectl clusterinfo` 查看minikube的相关信息；
+minikube虚拟机与宿主机使用不同的网络，可以使用 `minikube status ` 或 `kubectl clusterinfo` 查看minikube的相关信息；
 
 
 # NFS 安装
@@ -120,3 +120,6 @@ Export list for 192.168.8.26:
 ```
 ### 4.4 访问
 　访问本地的mnt目录，就可访问服务端共享的目录了
+
+
+# 启用内置插件
