@@ -4,12 +4,14 @@ apt install nfs-kernel-server
 ```
 
 # 设置
+```
 sudo vim /etc/exports
+```
 修改内容如下:
+```
 /var/nfs/data *(insecure,rw,sync,no_root_squash)
-
-//secure 选项要求mount客户端请求源端口小于1024（然而在使用 NAT 网络地址转换时端口一般总是大于1024的），默认情况下是开启这个选项的，如果要禁止这个选项，则使用 insecure 标识
-修改配置文件/etc/exports，加入 insecure 选项
+```
+secure 选项要求mount客户端请求源端口小于1024（然而在使用 NAT 网络地址转换时端口一般总是大于1024的），默认情况下是开启这个选项的，如果要禁止这个选项，则使用 insecure 标识；
 
 # 重启nfs服务
 ```
