@@ -13,10 +13,10 @@ UTCOP基于 kubernetes 平台的容器化编排与部署方案
 
 
 # 服务体系结构
-整个体系中的服务主要包含两大类：平台基础服务、UTCOP基础服务、UTCOP核心服务；
+整个体系中的服务主要包含三大类：平台基础服务、UTCOP基础服务、UTCOP核心服务；
 ![服务体系结构](./images/structure.png)
 
-## [平台基础服务](./structure/k8sbasic-service.md)
+## [平台基础服务/Addon](./structure/k8sbasic-service.md)
 kubernetes 运行不可或缺的插件，如 DNS、Log、Metric等；
 
 ## [UTCOP基础服务](./structure/utcopbasic-service.md)
@@ -56,7 +56,7 @@ Ingress + LB
 ## [日志](./servicemng/loginfo.md)
 容器日志收集、处理和搜索
 
-## [性能监控](./servicemng/metrics.md)
+## [监控](./servicemng/metrics.md)
 监控容器和集群的状态，并展示、告警
 
 ## [集群联邦](./servicemng/federa.md)
