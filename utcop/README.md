@@ -1,16 +1,4 @@
-UTCOP基于 kubernetes 平台的容器化编排与部署方案
-
-# 自动化集成
-- 应用代码与应用配置分离；
-- 代码打包成 docker 镜像存于内部容器仓库；
-- 应用配置托管于独立的 git + config 服务中；
-- 自动化构建基于 gitlab 和 jenkins ；
-
-## [项目基础](./ci/project.md) 
-
-## [构建流程](./ci/buildflow.md)
-![CI流程图](./images/ci.png)
-
+UTCOP平台及其基于DevOps最佳实践的研发部署过程体系简介
 
 # 服务体系结构
 整个体系中的服务主要包含三大类：平台基础服务、UTCOP基础服务、UTCOP核心服务；
@@ -25,8 +13,17 @@ UTCOP 平台的基础，如高可用数据库、分布式缓存、配置中心�
 ## [UTCOP核心服务](./structure/utcopcore-service.md)
 UTCOP 平台的核心服务，如统一认证授权中心、资源中心、存储仓等；
 
+# 整体结构
+整个体系可以分为两大类：UTCOP服务体系、DevOps研发部署体系。体系结构图如下所示：
+![基础结构](./images/compose.png)
 
-# 编排部署
+# DevOps过程
+[项目结构](./ci/project.md)
+
+[DevOps过程](./ci/buildflow.md)
+
+
+# 部署与配置
 `kubernetes + 自由算力` 为基础设施；并配套使用一些开源项目进行；
 
 ## 环境搭建
