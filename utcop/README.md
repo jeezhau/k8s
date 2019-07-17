@@ -55,7 +55,7 @@ Ingress + LB
 ## [版本升级](./servicemng/upgrade.md)
 服务新版本管理：重建、滚动升级
 
-## [日志](./servicemng/loginfo.md)
+## [日志](./servicemng/logging.md)
 容器日志收集、处理和搜索
 
 ## [集群联邦](./servicemng/federa.md)
@@ -63,7 +63,8 @@ Ingress + LB
 
 
 
-
+# 备份与回复
+有状态服务数据的备份与回复，mysql、oss、redis、consul
 
 
 
