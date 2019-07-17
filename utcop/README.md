@@ -30,7 +30,7 @@ UTCOP 平台的核心服务，如统一认证授权中心、资源中心、存�
 自由算力（自有DC、私有云、公有云）作为承载；linux 操作系统之上使用 `kubeasz` 一键完成 Kubernetes 运行环境的搭建；
 
 ## [网络规划](./compose//network.md) 
-IP 与 NodePort 的分配规划
+域名 、IP 、 NodePort 的分配规划
 
 # [服务空间隔离与规划](./ns-consist.md)
 根据服务的功能将其划分到不同的命名空间中，起到逻辑隔离作用
