@@ -13,10 +13,6 @@ UTCOP 平台的基础，如高可用数据库、分布式缓存、配置中心�
 ## [UTCOP核心服务](./structure/utcopcore-service.md)
 UTCOP 平台的核心服务，如统一认证授权中心、资源中心、存储仓等；
 
-# 整体结构
-整个体系可以分为两大类：UTCOP服务体系、DevOps研发部署体系。体系结构图如下所示：
-![基础结构](./images/compose.png)
-
 # DevOps过程
 [项目结构](./ci/project.md)
 
@@ -33,18 +29,24 @@ UTCOP 平台的核心服务，如统一认证授权中心、资源中心、存�
 ### [测试生产](./compose//env/test-prod.md)
 自由算力（自有DC、私有云、公有云）作为承载；linux 操作系统之上使用 `kubeasz` 一键完成 Kubernetes 运行环境的搭建；
 
-## [访问控制策略](./compose//access-control.md)
-严格控制集群管理内外/内外网 的服务可见性与身份认证授权；
-
 ## [网络规划](./compose//network.md) 
 IP 与 NodePort 的分配规划
 
-## [负载均衡](./compose//lb.md) 
+# [服务安装](./setup-service/README.md)
+UTCOP 使用 kubernets 进行部署需要的基础服务安装
+
+# [访问安全控制](./compose//access-control.md)
+严格控制集群管理内外/内外网 的服务可见性与身份认证授权；
+
+# [负载均衡](./compose//lb.md) 
 Ingress + LB
 
 
 # 服务治理
-## [服务自动伸缩](./servicemng/auto-scale.md)
+## [监控](./servicemng/monitor.md)
+监控容器和集群的状态，并展示、告警
+
+## [自动伸缩](./servicemng/auto-scale.md)
 根据流量与机器负载自动进行服务数量的伸缩；
 
 ## [版本升级](./servicemng/upgrade.md)
@@ -53,16 +55,13 @@ Ingress + LB
 ## [日志](./servicemng/loginfo.md)
 容器日志收集、处理和搜索
 
-## [监控](./servicemng/metrics.md)
-监控容器和集群的状态，并展示、告警
-
 ## [集群联邦](./servicemng/federa.md)
 多地域集群负载均衡、高可用
 
 
 
-
-
+# [服务空间隔离与规划](./ns-consist.md)
+根据服务的功能将其划分到不同的命名空间中，起到逻辑隔离作用
 
 
 
