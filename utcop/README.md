@@ -32,7 +32,10 @@ UTCOP 平台的核心服务，如统一认证授权中心、资源中心、存�
 ## [网络规划](./compose//network.md) 
 IP 与 NodePort 的分配规划
 
-# [服务安装](./setup-service/README.md)
+# [服务空间隔离与规划](./ns-consist.md)
+根据服务的功能将其划分到不同的命名空间中，起到逻辑隔离作用
+
+# [基础服务安装](./setup-service/README.md)
 UTCOP 使用 kubernets 进行部署需要的基础服务安装
 
 # [访问安全控制](./compose//access-control.md)
@@ -57,10 +60,6 @@ Ingress + LB
 
 ## [集群联邦](./servicemng/federa.md)
 多地域集群负载均衡、高可用
-
-
-# [服务空间隔离与规划](./ns-consist.md)
-根据服务的功能将其划分到不同的命名空间中，起到逻辑隔离作用
 
 
 
