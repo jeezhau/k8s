@@ -60,10 +60,19 @@ rm -rf ~/.minikube
 # Minikube缺省使用VirtualBox驱动来创建Kubernetes本地环境
 minikube start --registry-mirror=https://registry.docker-cn.com
 # 支持不同的Kubernetes版本, v1.12.1
-minikube start --registry-mirror=https://registry.docker-cn.com --kubernetes-version v1.12.1
+minikube start --    --kubernetes-version v1.12.1
+
+#配置k8s内存、cpu
+minikube config set memory 3072
+minikube config set cpus 4
+
 ```
 
 
+# 镜像地址
+- Docker 官方中国区: https://registry.docker-cn.com
+- 网易: http://hub-mirror.c.163.com
+- 中科大: https://docker.mirrors.ustc.edu.cn
 
 # 参照
 - [Minikube - Kubernetes本地实验环境](https://yq.aliyun.com/articles/221687/)
